@@ -1,6 +1,7 @@
 package Clubhouse;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Club {
 	
@@ -8,10 +9,16 @@ public class Club {
 	private ArrayList<Member> members = new ArrayList<Member>();
 	private Member m;
 	
+	public HashMap<Integer, Facility> facilMap = new HashMap<Integer, Facility>();
+	
 	//constructor
 	public Club() {
 		m = new Member();
 		members.add(m);
+		facilMap.put(1, new Facility("Danger Zone", "Training area for mutants."));
+		facilMap.put(2, new Facility("Jumping Grounds", "Where the ground and soil literaly jumps up."));
+		facilMap.put(3, new Facility("Snape's Hollow", "Practice your Aveda Kadava and Crucious curses here."));
+		facilMap.put(4, new Facility("Swordy Cave", "Fence your way to ultimate swordmanship here."));
 	}
 	
 	//methods
